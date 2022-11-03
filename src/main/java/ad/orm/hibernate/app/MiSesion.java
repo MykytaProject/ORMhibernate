@@ -1,9 +1,7 @@
 package ad.orm.hibernate.app;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
 
 public class MiSesion {
 
@@ -19,9 +17,7 @@ public class MiSesion {
             Configuration config = new Configuration();
             config.configure("hibernate.cfg.xml");
             System.out.println("Se ha cargado la configuración");
-            ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
-                    .applySettings(config.getProperties()).build();
-            sf = config.buildSessionFactory(serviceRegistry);
+            sf = config.buildSessionFactory();
         } catch (Throwable ex) {
             System.err.println("Initial SessionFactory creation failed." + ex);
             throw new ExceptionInInitializerError(ex);

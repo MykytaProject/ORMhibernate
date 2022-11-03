@@ -8,6 +8,6 @@
         <property name="connection.username">root</property>
         <property name="connection.password">0306</property>
         <property name="show_sql">true</property>
-        <mapping class="src.main.java.ad.orm.hibernate.domain.Clase"></mapping>
+        <mapping class="ad.orm.hibernate.domain.Clase"></mapping>
     </session-factory>
 </hibernate-configuration>
