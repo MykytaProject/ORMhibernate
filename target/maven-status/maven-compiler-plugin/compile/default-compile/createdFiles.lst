@@ -1,1 +1,3 @@
-ad\orm\hibernate\App.class
+ad\orm\hibernate\domain\Clase.class
+ad\orm\hibernate\app\App.class
+ad\orm\hibernate\app\MiSesion.class
