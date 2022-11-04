@@ -9,5 +9,8 @@
         <property name="connection.password">0306</property>
         <property name="show_sql">true</property>
         <mapping class="ad.orm.hibernate.domain.Clase"></mapping>
+        <mapping class="ad.orm.hibernate.domain.Raza"></mapping>
+        <mapping class="ad.orm.hibernate.domain.Cuenta"></mapping>
+        <mapping class="ad.orm.hibernate.domain.Usuario"></mapping>
     </session-factory>
 </hibernate-configuration>

@@ -13,6 +13,15 @@ public class Clase {
   @Column(name = "NOMBRE")
   private String nombre;
 
+  // !Constructores
+  public Clase(String s) {
+    nombre = s;
+  }
+
+  public Clase() {
+  }
+
+  // !Getters y Setters
   public String getNombre() {
     return nombre;
   }
@@ -21,8 +30,4 @@ public class Clase {
     this.nombre = nombre;
   }
 
-  public Clase(String s) {
-    nombre = s;
-  }
-  public Clase(){}
 }

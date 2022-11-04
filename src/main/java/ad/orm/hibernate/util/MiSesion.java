@@ -1,4 +1,4 @@
-package ad.orm.hibernate.app;
+package ad.orm.hibernate.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
