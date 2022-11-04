@@ -5,10 +5,9 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -31,9 +30,8 @@ public class Cuenta {
     private String contranya;
 
     @OneToOne
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @JoinColumn(name = "USUARIO_ID")
-    private int id;
+    private Usuario usuario;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "CUENTA_USER")
@@ -120,20 +118,6 @@ public class Cuenta {
      */
     public void setContranya(String contranya) {
         this.contranya = contranya;
-    }
-
-    /**
-     * @return the id
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * @param id the id to set
-     */
-    public void setId(int id) {
-        this.id = id;
     }
 
 }

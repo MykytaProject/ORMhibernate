@@ -12,5 +12,6 @@
         <mapping class="ad.orm.hibernate.domain.Raza"></mapping>
         <mapping class="ad.orm.hibernate.domain.Cuenta"></mapping>
         <mapping class="ad.orm.hibernate.domain.Usuario"></mapping>
+        <mapping class="ad.orm.hibernate.domain.Personaje"></mapping>
     </session-factory>
 </hibernate-configuration>

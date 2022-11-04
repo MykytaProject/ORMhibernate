@@ -1,10 +1,13 @@
 package ad.orm.hibernate.domain;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -12,6 +15,7 @@ import javax.persistence.Table;
 @Table(name = "PERSONAJE")
 public class Personaje {
 
+    @Id
     @Column(name = "NOMBRE")
     private String nombre;
 
@@ -22,20 +26,22 @@ public class Personaje {
     @Enumerated(value = EnumType.STRING)
     private Genero genero;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "RAZA_has_CLASE_RAZA_NOMBRE")
     private String raza;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "RAZA_has_CLASE_CLASE_NOMBRE")
     private String clase;
+
+    private String cuentaUser;
 
     // !Constructores
     public Personaje() {
 
     }
 
-    public Personaje(String nombre, int oro, Genero genero, String raza, String clase){
+    public Personaje(String nombre, int oro, Genero genero, String raza, String clase) {
         this.nombre = nombre;
         this.oro = oro;
         this.genero = genero;
@@ -43,7 +49,21 @@ public class Personaje {
         this.clase = clase;
     }
 
-    // !Getters y Setters 
+    // !Getters y Setters
+    /**
+     * @return the cuentaUser
+     */
+    public String getCuentaUser() {
+        return cuentaUser;
+    }
+
+    /**
+     * @param cuentaUser the cuentaUser to set
+     */
+    public void setCuentaUser(String cuentaUser) {
+        this.cuentaUser = cuentaUser;
+    }
+
     /**
      * @return the nombre
      */
@@ -112,5 +132,5 @@ public class Personaje {
      */
     public void setClase(String clase) {
         this.clase = clase;
-    }
+    } 
 }
