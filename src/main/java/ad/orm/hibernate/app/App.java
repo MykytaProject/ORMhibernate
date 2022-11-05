@@ -8,8 +8,9 @@ import ad.orm.hibernate.util.MiSesion;
 public class App {
 
   public static Session s = MiSesion.getSessionFactory().openSession();
+
   public static void main(String[] args) {
-    
+
     Menu.ejecutarMenu();
 
     s.close();

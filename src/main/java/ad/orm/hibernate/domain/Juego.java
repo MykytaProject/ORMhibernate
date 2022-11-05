@@ -34,9 +34,8 @@ public class Juego {
     @JoinColumn(name = "PRODUCTORA_NOMBRE")
     private Productora productora;
 
-   
     // !Getters y Setters
-     /**
+    /**
      * @return the productora
      */
     public Productora getProductora() {

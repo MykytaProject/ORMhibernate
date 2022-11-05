@@ -24,13 +24,14 @@ public class Productora {
     @Column(name = "DIRECTOR")
     private String director;
 
-    @OneToMany(mappedBy = "productora", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @OneToMany(mappedBy = "productora", cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH,
+            CascadeType.REFRESH })
     private List<Juego> juegos;
 
     // !Metodo agregar
 
-    public void agregarJuego(Juego juego){
-        if(juegos == null){
+    public void agregarJuego(Juego juego) {
+        if (juegos == null) {
             juegos = new ArrayList<>();
         }
         juegos.add(juego);

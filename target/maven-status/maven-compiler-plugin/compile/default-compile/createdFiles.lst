@@ -1,3 +1,7 @@
-ad\orm\hibernate\domain\Clase.class
+ad\orm\hibernate\domain\Juego.class
+ad\orm\hibernate\service\Menu.class
+ad\orm\hibernate\app\Test.class
+ad\orm\hibernate\service\MetodosMenu.class
 ad\orm\hibernate\app\App.class
-ad\orm\hibernate\app\MiSesion.class
+ad\orm\hibernate\util\MiSesion.class
+ad\orm\hibernate\domain\Productora.class

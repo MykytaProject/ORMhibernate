@@ -26,11 +26,14 @@ public class Menu {
             switch (key) {
                 case "1":
                     do {
-                        System.out.println("Dime la tabla [Productora] o [Salir]");
+                        System.out.println("Dime la tabla [Productora], [Juego] o [Salir]");
                         tabla = scS.nextLine();
                         switch (tabla) {
                             case "Productora":
                                 mm.listarProductora();
+                                break;
+                            case "Juego":
+
                                 break;
                             case "Salir":
                                 submenu = false;
@@ -68,12 +71,14 @@ public class Menu {
                     break;
                 case "3":
                     do {
-                        System.out.println("Dime la tabla [Productora] o [Salir]");
+                        System.out.println("Dime la tabla [Productora], [Juego] o [Salir]");
                         tabla = scS.nextLine();
                         switch (tabla) {
                             case "Productora":
                                 mm.modificarProductora();
                                 break;
+                            case "Juego":
+                                mm.modificarJuego();
                             case "Salir":
                                 submenu = false;
                                 tabla = null;
