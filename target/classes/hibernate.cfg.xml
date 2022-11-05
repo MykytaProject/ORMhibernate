@@ -8,10 +8,7 @@
         <property name="connection.username">root</property>
         <property name="connection.password">0306</property>
         <property name="show_sql">true</property>
-        <mapping class="ad.orm.hibernate.domain.Clase"></mapping>
-        <mapping class="ad.orm.hibernate.domain.Raza"></mapping>
-        <mapping class="ad.orm.hibernate.domain.Cuenta"></mapping>
-        <mapping class="ad.orm.hibernate.domain.Usuario"></mapping>
-        <mapping class="ad.orm.hibernate.domain.Personaje"></mapping>
+        <mapping class="ad.orm.hibernate.domain.Productora"></mapping>
+        <mapping class="ad.orm.hibernate.domain.Juego"></mapping>
     </session-factory>
 </hibernate-configuration>
