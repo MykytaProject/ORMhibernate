@@ -14,5 +14,6 @@ public class App {
     Menu.ejecutarMenu();
 
     s.close();
+    HibernateUtil.close(HibernateUtil.getSessionFactory());
   }
 }

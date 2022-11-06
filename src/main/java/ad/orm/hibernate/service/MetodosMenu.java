@@ -108,8 +108,9 @@ public class MetodosMenu {
             System.out.println("Dime el nombre de la productora que quieres borra");
             string = sc.nextLine();
             Productora p = s.get(Productora.class, string);
+            
+            // Lo huardo en un objeto o para luego rescatarlo
             o = p;
-
             s.delete(p);
             s.getTransaction().commit();
             System.out.println("Los datos se han borrado correctamente");
