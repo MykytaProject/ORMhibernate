@@ -1,6 +1,9 @@
 package ad.orm.hibernate.domain;
 
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -9,12 +12,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "JUEGO")
-public class Juego {
+public class Juego implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,11 +36,52 @@ public class Juego {
     @Column(name = "LANZAMIENTO")
     private LocalDate date;
 
+    // !Relacion con PRODUCTORA
     @ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH })
     @JoinColumn(name = "PRODUCTORA_NOMBRE")
     private Productora productora;
 
+    // !Relacion con SERVIDOR
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "SERVIDOR_ID")
+    private Servidor servidor;
+
+    // !Relacion con DISTRIBUIDORA
+    @ManyToMany(cascade =  { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH })
+    @JoinTable(name = "J_D", joinColumns = {
+            @JoinColumn(name = "ID") }, inverseJoinColumns = { @JoinColumn(name = "NOMBRE") })
+    private List<Distribuidora> distribuidoras = new ArrayList<>();
+
     // !Getters y Setters
+
+    /**
+     * @return the distribuidoras
+     */
+    public List<Distribuidora> getDistribuidoras() {
+        return distribuidoras;
+    }
+
+    /**
+     * @param distribuidoras the distribuidoras to set
+     */
+    public void setDistribuidoras(List<Distribuidora> distribuidoras) {
+        this.distribuidoras = distribuidoras;
+    }
+
+    /**
+     * @return the servidor
+     */
+    public Servidor getServidor() {
+        return servidor;
+    }
+
+    /**
+     * @param servidor the servidor to set
+     */
+    public void setServidor(Servidor servidor) {
+        this.servidor = servidor;
+    }
+
     /**
      * @return the productora
      */

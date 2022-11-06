@@ -3,9 +3,9 @@ package ad.orm.hibernate.util;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class MiSesion {
+public class HibernateUtil {
 
-    private MiSesion() {
+    private HibernateUtil() {
     }
 
     private static final SessionFactory sf = getConexion();

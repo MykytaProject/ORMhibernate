@@ -10,5 +10,7 @@
         <property name="show_sql">true</property>
         <mapping class="ad.orm.hibernate.domain.Productora"></mapping>
         <mapping class="ad.orm.hibernate.domain.Juego"></mapping>
+        <mapping class="ad.orm.hibernate.domain.Servidor"></mapping>
+        <mapping class="ad.orm.hibernate.domain.Distribuidora"></mapping>
     </session-factory>
 </hibernate-configuration>
