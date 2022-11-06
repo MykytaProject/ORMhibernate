@@ -10,6 +10,7 @@ Proyecto de clase para conectarse y manipular una BBDD usando hibernate y maven
 - [Instalación](#instalacion)
 - [Importante BBDD](#Importante)
 - [Autor](Autor)
+- [Repositorio](Repositorio)
 
 ## Uso
 
@@ -52,3 +53,8 @@ En caso de haber creado una BBDD con una configuración diferente a la que viene
 ## Autor
 
 El creador del proyecto es Mykyta Ryasny del grupo 2º Q semi presencial.
+
+<p>
+
+## Repositorio
+Enlace al repositorio [Repositorio](https://github.com/MykytaProject/ORMhibernate)
